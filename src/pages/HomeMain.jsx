@@ -1,11 +1,11 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { SECTIONS } from "../constants/MAINCONSTANTS";
 import Section from "../components/Section";
+import { Carousel } from "../hooks/Carousel";
 
 const HomeMain = () => {
   return (
-    <main className="flex flex-col gap-10 tab:gap-0">
+    <main className="flex flex-col tab:gap-0">
+      <Carousel />
       {SECTIONS.map((section) => (
         <Section key={section.title} {...section} />
       ))}

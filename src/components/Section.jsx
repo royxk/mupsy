@@ -33,21 +33,22 @@ const Section = ({ image, text, title, animateOnScroll, id }) => {
 
   return (
     <div className="p-10 tab:p-20 flex flex-col gap-10 tab:flex-row tab:place-content-between">
-      <motion.div
+      <motion.button
         ref={ref}
-        className={`w-full tab:max-w-[500px] rounded-lg ${
+        className={`w-full tab:max-w-[500px] rounded-lg  ${
           isOdd ? "tab:order-2" : "tab:order-1"
         }`}
         initial="hidden"
         animate={controls}
         variants={imageVariants}
+        whileHover={{ scale: 1.05, originY: 1 }}
       >
         <img
           className="rounded-xl w-full h-auto max-w-full tab:max-w-[500px]"
           src={image}
           alt={title}
         />
-      </motion.div>
+      </motion.button>
       <motion.div
         className={`flex flex-col gap-10 justify-center ${
           isOdd ? "tab:order-1" : "tab:order-2"

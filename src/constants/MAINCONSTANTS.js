@@ -11,7 +11,7 @@ export const SECTIONS = [
     id: 2,
     image: require("../assets/main2.png"),
     text: "이달의 메이크업이달의 메이크업이달의 메이크업이달의 메이크업이달의 메이크업이달의 메이크업이달의 메이크업이달의 메이크업",
-    title: "이달의 메이크업",
+    title: "메이크업 레슨",
     animateOnScroll: true,
   },
   {
