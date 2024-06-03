@@ -8,7 +8,7 @@ const Header = () => {
       <Link to="/">
         <Logo />
       </Link>
-      <nav className="flex flex-row place-content-between gap-5">
+      <nav className="flex flex-row place-content-between gap-3 tab:gap-5 flex-wrap">
         <Link className="hover:border-b-2 hover:border-gray-300" to="/about">
           About
         </Link>

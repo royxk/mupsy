@@ -11,10 +11,10 @@ export function Carousel() {
   ]);
 
   return (
-    <div className="embla overflow-hidden p-10" ref={emblaRef}>
+    <div className="embla overflow-hidden pt-10" ref={emblaRef}>
       <div className="flex align-middle content-center gap-10">
-        <div className="min-w-0 flex-[0_0_100%] relative h-60   ">
-          <div className="absolute inset-0 flex items-center justify-center text-[75px] text-white">
+        <div className="min-w-0 flex-[0_0_100%] relative h-[120px] tab:h-60   ">
+          <div className="absolute inset-0 flex items-center justify-center text-[45px] tab:text-[75px] text-white">
             Pretty
           </div>
           <img
@@ -23,8 +23,8 @@ export function Carousel() {
             alt="c1"
           />
         </div>
-        <div className="min-w-0 relative flex-[0_0_100%] w-full h-60">
-          <div className="absolute inset-0 flex items-center justify-center text-[75px] text-white">
+        <div className="min-w-0 relative flex-[0_0_100%] w-full h-[120px] tab:h-60 ">
+          <div className="absolute inset-0 flex items-center justify-center text-[45px] tab:text-[75px] text-white">
             Georgious
           </div>
           <img
@@ -33,8 +33,8 @@ export function Carousel() {
             alt="c2"
           />
         </div>
-        <div className="min-w-0 relative flex-[0_0_100%] w-full h-60">
-          <div className="absolute inset-0 flex items-center justify-center text-[75px] text-white">
+        <div className="min-w-0 relative flex-[0_0_100%] w-full h-[120px] tab:h-60 ">
+          <div className="absolute inset-0 flex items-center justify-center text-[45px] tab:text-[75px] text-white">
             Amazing
           </div>
           <img
