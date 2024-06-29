@@ -4,31 +4,31 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="fixed z-10 p-5 tab:p-10 bg-white place-content-between w-full gap-5 tab:gap-20 flex flex-col tab:flex-row">
-      <Link to="/">
-        <Logo />
-      </Link>
-      <nav className="flex flex-row place-content-between gap-3 tab:gap-5 flex-wrap">
-        <Link className="hover:border-b-2 hover:border-gray-300" to="/about">
-          About
+    <header className="w-full fixed z-10 top-0 left-0 right-0 bg-white flex justify-center items-center py-4 px-6 sm:px-10">
+      <div className="tab:flex-row tab:p-10 flex-col gap-3 max-w-screen-xl w-full flex justify-between items-center">
+        <Link to="/" className="flex items-center">
+          <Logo className="h-8" />
         </Link>
-        <Link className="hover:border-b-2 hover:border-gray-300" to="/history">
-          History
-        </Link>
-        <Link
-          className="hover:border-b-2 hover:border-gray-300"
-          to="/reservation"
-        >
-          Reservation
-        </Link>
-        <Link className="hover:border-b-2 hover:border-gray-300" to="/location">
-          Location
-        </Link>
-        <Link className="hover:border-b-2 hover:border-gray-300" to="/contact">
-          Contact
-        </Link>
-      </nav>
+        <nav className="flex items-center justify-center space-x-5">
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/history">History</NavLink>
+          <NavLink to="/reservation">Reservation</NavLink>
+          <NavLink to="/location">Location</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+        </nav>
+      </div>
     </header>
+  );
+};
+
+const NavLink = ({ to, children }) => {
+  return (
+    <Link
+      to={to}
+      className="text-gray-600 hover:text-gray-900 hover:border-b-2 hover:border-gray-300"
+    >
+      {children}
+    </Link>
   );
 };
 

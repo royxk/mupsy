@@ -11,37 +11,25 @@ export function Carousel() {
   ]);
 
   return (
-    <div className="embla overflow-hidden pt-10" ref={emblaRef}>
-      <div className="flex align-middle content-center gap-10">
-        <div className="min-w-0 flex-[0_0_100%] relative h-[120px] tab:h-60   ">
+    <div className="overflow-hidden pt-[100px]" ref={emblaRef}>
+      <div className="flex align-middle content-center">
+        <div className="min-w-0 flex-[0_0_100%] relative h-[300px] tab:h-60   ">
           <div className="absolute inset-0 flex items-center justify-center text-[45px] tab:text-[75px] text-white">
             Pretty
           </div>
-          <img
-            src={c1}
-            className="w-full h-full object-cover rounded-xl"
-            alt="c1"
-          />
+          <img src={c1} className="w-full h-full object-cover" alt="c1" />
         </div>
-        <div className="min-w-0 relative flex-[0_0_100%] w-full h-[120px] tab:h-60 ">
+        <div className="min-w-0 relative flex-[0_0_100%] w-full h-[300px] tab:h-60 ">
           <div className="absolute inset-0 flex items-center justify-center text-[45px] tab:text-[75px] text-white">
             Georgious
           </div>
-          <img
-            src={c2}
-            className="w-full rounded-xl h-full object-cover"
-            alt="c2"
-          />
+          <img src={c2} className="w-full h-full object-cover" alt="c2" />
         </div>
-        <div className="min-w-0 relative flex-[0_0_100%] w-full h-[120px] tab:h-60 ">
+        <div className="min-w-0 relative flex-[0_0_100%] w-full h-[300px] tab:h-60 ">
           <div className="absolute inset-0 flex items-center justify-center text-[45px] tab:text-[75px] text-white">
             Amazing
           </div>
-          <img
-            src={c3}
-            className="w-full rounded-xl h-full object-cover"
-            alt="c3"
-          />
+          <img src={c3} className="w-full h-full object-cover" alt="c3" />
         </div>
       </div>
     </div>

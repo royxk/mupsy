@@ -7,9 +7,8 @@ const Layout = () => {
   return (
     <div>
       <Header />
-
-      <div className="flex flex-col p-10 align-center w-full items-center justify-center tab:p-10 min-h-screen">
-        <div className="flex-grow pt-10 max-w-[1020px]">
+      <div className="flex flex-col align-center w-full items-center justify-center tab:p-10 min-h-screen">
+        <div className="flex-grow w-full desktop:max-w-[1020px]">
           <Outlet />
         </div>
 

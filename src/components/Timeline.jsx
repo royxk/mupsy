@@ -114,10 +114,13 @@ const Timeline = () => {
   };
 
   return (
-    <div className="flex flex-col gap-10 w-full h-full p-5 min-h-screen tab:p-10">
+    <div className="flex flex-col gap-10 items-center w-full h-full p-5 min-h-screen tab:p-10">
       <div className="text-center text-4xl font-bold">HISTORY</div>
       {timelineData.map((section, index) => (
-        <div key={index} className="flex gap-5 tab:gap-20 flex-row w-full">
+        <div
+          key={index}
+          className="justify-between flex w-[300px] gap-5 tab:gap-20 flex-row"
+        >
           <div className="w-[80px] tab:w-[120px] text-xl tab:text-4xl font-bold text-pink-300">
             {section.period}
           </div>
@@ -128,7 +131,7 @@ const Timeline = () => {
                 expandedPeriods[section.period] ? section.events.length : 4
               )
               .map((event) => (
-                <div className="flex gap-4">
+                <div className="content-center flex gap-4">
                   <div className="flex flex-col items-center">
                     <div className="bg-pink-300 w-2 h-2 rounded-full"></div>
                     <div className="w-px h-full bg-pink-300"></div>

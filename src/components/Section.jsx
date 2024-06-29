@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const Section = ({ image, text, title, animateOnScroll, id }) => {
+const Section = ({ image, text, title, animateOnScroll, id, highlight }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -44,7 +44,7 @@ const Section = ({ image, text, title, animateOnScroll, id }) => {
         whileHover={{ scale: 1.05, originY: 1 }}
       >
         <img
-          className="rounded-xl w-full h-auto max-w-full tab:max-w-[500px]"
+          className="w-full object-cover h-[300px] rounded-lg"
           src={image}
           alt={title}
         />
@@ -57,7 +57,18 @@ const Section = ({ image, text, title, animateOnScroll, id }) => {
         animate={controls}
         variants={textVariants}
       >
-        <div className="font-bold text-xl">{title}</div>
+        <div className="font-bold text-3xl">
+          {title}
+          <span
+            className={`bg-gradient-to-r ${
+              isOdd
+                ? "from-blue-200 to-cyan-200"
+                : "from-fuchsia-500 to-pink-500"
+            } text-transparent bg-clip-text`}
+          >
+            {highlight}
+          </span>
+        </div>
         <p>{text}</p>
       </motion.div>
     </div>

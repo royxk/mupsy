@@ -11,6 +11,7 @@ const LOCATION_DATA = [
     phone: "(123) 456-7890",
     email: "",
     image: location1,
+    url: "https://map.naver.com/p/search/%EB%A9%89%EC%94%A8/place/1123588155?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp",
   },
   {
     title: "MUPSY 홍대점",
@@ -18,8 +19,12 @@ const LOCATION_DATA = [
     phone: "(987) 654-3210",
     email: "",
     image: location2,
+    url: "https://map.naver.com/p/search/%ED%95%A9%EC%A0%95%EC%97%AD?c=15.00,0,0,0,dh",
   },
 ];
+const handleButtonClick = (url) => {
+  window.open(url, "_blank");
+};
 
 const Location = () => {
   const controls = useAnimation();
@@ -50,6 +55,7 @@ const Location = () => {
           animate={controls}
           variants={textVariants}
           whileHover={{ scale: 1.05 }}
+          onClick={() => handleButtonClick(location.url)}
         >
           <div className="w-[300px] tab:w-[800px] bg-white rounded-lg flex flex-col gap-1 shadow-lg p-6 mb-8 max-w-4xl">
             <h3 className="text-base tab:text-2xl font-bold text-start text-pink-400 mb-2">
@@ -73,7 +79,7 @@ const Location = () => {
                   Email: {location.email}
                 </p>
               </div>
-              <div className="w-[200px] h-[100px] tab:w-[400px] tab:h-[300px]">
+              <div className="w-[250px] h-[200px] tab:w-[400px] tab:h-[300px]">
                 <img
                   src={location.image}
                   alt={location.title}

@@ -3,7 +3,7 @@ import Timeline from "../components/Timeline";
 
 const History = () => {
   return (
-    <div className="pt-[50px]">
+    <div className="pt-[200px]">
       <Timeline />
     </div>
   );
